@@ -64,9 +64,9 @@ abstract class AbstractPublisher
     abstract public function publishResults(
         string $testCaseName,
         string $status,
-        string $result = null,
-        \DateTimeInterface $testCaseStartDate = null,
-        \DateTimeInterface $testCaseEndDate = null
+        ?string $result = null,
+        ?\DateTimeInterface $testCaseStartDate = null,
+        ?\DateTimeInterface $testCaseEndDate = null
     ): void;
 
     /**
@@ -80,8 +80,8 @@ abstract class AbstractPublisher
         string $testName,
         Test $testInstance,
         string $status,
-        string $result = null,
-        string $message = null
+        ?string $result = null,
+        ?string $message = null
     ): void;
 
     public static function getResultForPhpUnitTestStatus(int $phpUnitTestStatus): string
