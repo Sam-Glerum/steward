@@ -65,8 +65,8 @@ abstract class AbstractPublisher
         string $testCaseName,
         string $status,
         ?string $result = null,
-        \?DateTimeInterface $testCaseStartDate = null,
-        \?DateTimeInterface $testCaseEndDate = null
+        ?\DateTimeInterface $testCaseStartDate = null,
+        ?\DateTimeInterface $testCaseEndDate = null
     ): void;
 
     /**

@@ -63,8 +63,8 @@ class XmlPublisher extends AbstractPublisher
         string $testCaseName,
         string $status,
         ?string $result = null,
-        \?DateTimeInterface $testCaseStartDate = null,
-        \?DateTimeInterface $testCaseEndDate = null
+        ?\DateTimeInterface $testCaseStartDate = null,
+        ?\DateTimeInterface $testCaseEndDate = null
     ): void {
         $xml = $this->readAndLock();
 
