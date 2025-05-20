@@ -62,9 +62,9 @@ class XmlPublisher extends AbstractPublisher
     public function publishResults(
         string $testCaseName,
         string $status,
-        string $result = null,
-        \DateTimeInterface $testCaseStartDate = null,
-        \DateTimeInterface $testCaseEndDate = null
+        ?string $result = null,
+        \?DateTimeInterface $testCaseStartDate = null,
+        \?DateTimeInterface $testCaseEndDate = null
     ): void {
         $xml = $this->readAndLock();
 
@@ -88,8 +88,8 @@ class XmlPublisher extends AbstractPublisher
         string $testName,
         Test $testInstance,
         string $status,
-        string $result = null,
-        string $message = null
+        ?string $result = null,
+        ?string $message = null
     ): void {
         if (!in_array($status, self::TEST_STATUSES, true)) {
             throw new \InvalidArgumentException(
