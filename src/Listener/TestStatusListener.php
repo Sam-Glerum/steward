@@ -34,7 +34,7 @@ class TestStatusListener implements TestListener
      * @param string[] $customTestPublishers Array of fully qualified names of AbstractPublisher classes
      * @param SeleniumServerAdapter $seleniumServerAdapter Inject SeleniumServerAdapter. Used only for tests.
      */
-    public function __construct(array $customTestPublishers, SeleniumServerAdapter ?$seleniumServerAdapter = null)
+    public function __construct(array $customTestPublishers, ?SeleniumServerAdapter $seleniumServerAdapter = null)
     {
         $config = ConfigProvider::getInstance();
         if ($seleniumServerAdapter === null) {
